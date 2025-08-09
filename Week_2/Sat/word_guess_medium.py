@@ -53,5 +53,4 @@ if __name__ == "__main__":
 
    letter_count_ = len(word_)
    print('Word length:',' _ '* letter_count_)
-   print(word_)
    check_letter(word_)
