@@ -1,8 +1,11 @@
 import random
 
-def generate_word():
-    words_list_ = ["king", "spade", "jack", "ace", "joker", "heart", "deck", "club", "red", "black","white", "blue", "orange", "violet", "pink"]
-    return random.choice(words_list_)
+class Words:
+    def __init__(self):
+        self.words_list_ = ["king", "spade", "jack", "ace", "joker", "heart", "deck", "club", "red", "black", "white", "blue", "orange", "violet", "pink"]
+
+    def generate_word(self):
+        return random.choice(self.words_list_)
 
 def guess_letter(word_):
     guess_count_ = len(word_) + 3
@@ -92,15 +95,16 @@ def validations(letter_):
 
 if __name__ == "__main__":
    difficulty = input("Choose mode number(1 : Letter, 2: Word): ")
-   word_ = generate_word()
+   words_ = Words()
+   random_word_ = words_.generate_word()
 
-   letter_count_ = len(word_)
+   letter_count_ = len(random_word_)
    print('Word length:',' _ '* letter_count_)
    print(' ')
    
    if difficulty == '1':
-        guess_letter(word_)
+        guess_letter(random_word_)
    elif difficulty == '2':
-        guess_word_(word_)
+        guess_word_(random_word_)
    else:
         print("Invalid mode selected. Please choose 1 or 2.")   
