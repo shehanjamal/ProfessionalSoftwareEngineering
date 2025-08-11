@@ -56,5 +56,6 @@ def main():
             print("Invalid input. Please try again. Enter 1 2 or 3.")
 
         print("")
+        
 if __name__ == "__main__":
     main()
