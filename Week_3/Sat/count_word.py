@@ -4,10 +4,8 @@ class ReadWriteTxt:
 
     def count_word(self):
         with open(self.filename, "r", encoding="utf-8") as file:
-            content = file.readlines()
-            count = 0
-            for line in content:
-                count += len(line.split())
+            content = file.read()
+            count = len(content.split())
             print("Total word count:", count)
 
 
