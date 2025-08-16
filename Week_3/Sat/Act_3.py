@@ -6,6 +6,8 @@ class ReadFile:
 
     def read(self):
         df = pd.read_csv(self.filename)
+        df.to_parquet(self.filename.replace('.csv', '.parquet'))
+
         return df.columns 
 
     def average(self, column_name):
@@ -56,7 +58,6 @@ def main():
         file_reader.absolute(column)
     print("")
 
-    
 
 if __name__ == "__main__":
    main()
