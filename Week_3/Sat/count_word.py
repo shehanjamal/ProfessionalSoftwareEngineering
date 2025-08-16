@@ -2,12 +2,6 @@ class ReadWriteTxt:
     def __init__(self, filename):
         self.filename = filename
 
-    def read_txt(self):
-        with open(self.filename, "r", encoding="utf-8") as file:
-            content = file.readlines()
-            for line in content:
-                print(line)
-
     def count_word(self):
         with open(self.filename, "r", encoding="utf-8") as file:
             content = file.readlines()
@@ -19,7 +13,6 @@ class ReadWriteTxt:
 
 def main():
     read_write = ReadWriteTxt("demo.txt")
-    read_write.read_txt()
     read_write.count_word()
 
 if __name__ == "__main__":
