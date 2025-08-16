@@ -1,0 +1,12 @@
+A student enrolls in the college yoobee. He studies in the course MSE. He has many lecturers. Each lecturer has a diffrent module which 
+he teaches but some modules are taught by the same lecturer.Student are enrolled in all modules and students is enrolled for 1 year for each course. 
+Each student is enrolled in one course. Each student also has 1 class where he is taught by the lecturer.
+
+Entites :
+	Student
+	Lecturer
+	Course
+	Modules
+	Class
+
+	
