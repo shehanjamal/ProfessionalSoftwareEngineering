@@ -33,7 +33,7 @@ def search_student(stu_name):
 def delete_student(student_id):
     conn = create_connection()
     cursor = conn.cursor()
-    cursor.execute("DELETE FROM student WHERE id = ?", (student_id,))
+    cursor.execute("DELETE FROM student WHERE student_id = ?", (student_id,))
     conn.commit()
     conn.close()
     print("🗑️ User deleted.")
