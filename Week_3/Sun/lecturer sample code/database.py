@@ -14,13 +14,5 @@ def create_table():
             email TEXT NOT NULL UNIQUE
         )
     ''')
-
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS student (
-            student_id INTEGER PRIMARY KEY AUTOINCREMENT,
-            stu_name TEXT NOT NULL,
-            stu_addrs TEXT NOT NULL UNIQUE
-        )
-    ''')
     conn.commit()
     conn.close()
