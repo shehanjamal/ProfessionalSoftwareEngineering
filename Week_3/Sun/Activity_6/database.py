@@ -54,5 +54,57 @@ def create_table():
         )
     ''')
 
+    # Transaction tables
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS student_course (
+            student_id INTEGER,
+            course_id INTEGER,
+            FOREIGN KEY (student_id) REFERENCES student(student_id),
+            FOREIGN KEY (course_id) REFERENCES course(course_id),
+            PRIMARY KEY (student_id, course_id)
+        )
+    ''')
+
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS lecturer_course (
+            lecturer_id INTEGER,
+            course_id INTEGER,
+            FOREIGN KEY (lecturer_id) REFERENCES lecturer(lecturer_id),
+            FOREIGN KEY (course_id) REFERENCES course(course_id),
+            PRIMARY KEY (lecturer_id, course_id)
+        )
+    ''')
+
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS class_lecturer (
+            class_id INTEGER,
+            lecturer_id INTEGER,
+            FOREIGN KEY (class_id) REFERENCES class(class_id),
+            FOREIGN KEY (lecturer_id) REFERENCES lecturer(lecturer_id),
+            PRIMARY KEY (class_id, lecturer_id)
+        )
+    ''')    
+
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS student_lecturer (
+            student_id INTEGER,
+            lecturer_id INTEGER,
+            FOREIGN KEY (student_id) REFERENCES student(student_id),
+            FOREIGN KEY (lecturer_id) REFERENCES lecturer(lecturer_id),
+            PRIMARY KEY (student_id, lecturer_id)
+        )
+    ''')
+
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS major_lecturer (
+            major_id INTEGER,
+            lecturer_id INTEGER,
+            FOREIGN KEY (major_id) REFERENCES major(major_id),
+            FOREIGN KEY (lecturer_id) REFERENCES lecturer(lecturer_id),
+            PRIMARY KEY (major_id, lecturer_id)
+        )
+    ''')    
+
+
     conn.commit()
     conn.close()
