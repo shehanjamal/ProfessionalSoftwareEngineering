@@ -8,5 +8,6 @@ Entites :
 	Major
 	Course
 	Class
+	Admin
 
 	
