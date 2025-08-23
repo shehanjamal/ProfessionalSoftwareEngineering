@@ -9,17 +9,19 @@ Actors:
 	Admin -    Handle relevant assignemnts (assign to class, major or course),  enroll student into system znd remove student from system.
 
 Use Cases-
-	Enroll student (Admin)
-	Remove student (Admin)
-	Assign student to course (Admin)
-	Assign student to major (Admin)
-	Assign class (Admin)
-	View   student details (Student)
-	Update student details (Student)
-	Add lecturer details (Admin)
-	View/Update lecturer details (Lecturer)
-	View course details (Student/Lecturer)
-	Update course details (lecturer)
-	Remove Course (Admin/Lecturer)
+	-Enroll student (Admin)
+	-Remove student (Admin)
+	-Assign student to course (Admin)
+	-Assign student to major (Admin)
+	-Assign class (Admin)
+	-View   student details (Student)
+	-Update student details (Student)
+	-Add lecturer details (Admin)
+	-Add New Course (Lecturer/Admin)
+	-Add New Major	(Lecturer/ Admin)
+	-View/Update lecturer details (Lecturer)
+	-View course details (Student/Lecturer)
+	-Update course details (lecturer)
+	-Remove Course (Admin/Lecturer)
 
 	
