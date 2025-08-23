@@ -1,0 +1,25 @@
+
+A student enrolls in the college yoobee. He studies in the major MSE. He has many lecturers. Each lecturer has a diffrent course which 
+he teaches but some courses are taught by the same lecturer.Student are enrolled in all course and students are at least enrolled for 1 year for each major.
+Each student is enrolled in one major. Each student also has 1 class where he is taught by the lecturer.
+
+Actors:
+	Student -  Student enrolls in the major
+	Lecturer-  Lecturer teaches courses for student
+	Admin -    Handle relavant assignemnts(assign to class, major or course),  enroll student into system, remove student from system, etc.
+
+Use Cases-
+	Enroll student (Admin)
+	Remove student (Admin)
+	Assign student to course (Admin)
+	Assign student to major (Admin)
+	Assign class (Admin)
+	View   student details (Student)
+	Update student details (Student)
+	Add lecturer details (Admin)
+	View/Update lecturer details (Lecturer)
+	View course details (Student/Lecturer)
+	Update course details (lecturer)
+	Remove Course (Admin/Lecturer)
+
+	
