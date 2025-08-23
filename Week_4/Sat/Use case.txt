@@ -6,7 +6,7 @@ Each student is enrolled in one major. Each student also has 1 class where he is
 Actors:
 	Student -  Student enrolls in the major
 	Lecturer-  Lecturer teaches courses for student
-	Admin -    Handle relevant assignemnts(assign to class, major or course),  enroll student into system, remove student from system, etc.
+	Admin -    Handle relevant assignemnts (assign to class, major or course),  enroll student into system znd remove student from system.
 
 Use Cases-
 	Enroll student (Admin)
