@@ -1,7 +1,6 @@
 class employee:
     def __init__(self, name, age, salary):
         self.name = name       # public​
-        self._age = age        # protected​
         self.__salary = salary  # private​
 
     def get_salary(self):
