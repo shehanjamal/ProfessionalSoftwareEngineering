@@ -1,0 +1,4 @@
+Yes we can add a class but it cannot be added under the Person class because it does not have a relationship 
+the parent class. When adding a class under the parent we have to check whether 
+it can have parent child relationship as we can see class cannot have a preant child relationship with person so due to 
+this it cannot be added as child class. It can be added as a separate class.
