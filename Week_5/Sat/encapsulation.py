@@ -22,6 +22,9 @@ class Student:
     def reduce_grade(self):
         self.__grade = 'B'
 
+    def Update_grade(self):
+        self.__grade = 'A+'
+
 def main():
     s = Student('Ali', 20)
     print(s.name)         # accessible​
@@ -32,6 +35,10 @@ def main():
     s.reduce_grade()
     print(s.get_grade())  # correct way​
 
+    print("Increasing grade...")
+    s.Update_grade()
+    print(s.get_grade())  # correct way​
+
     print("")
     e = employee('John', 30, 50000)
     print(e.name)          # accessible​
@@ -40,6 +47,7 @@ def main():
 
     print(e.get_salary())          # accessible​
     e.__salary = 60000  # won't change the actual salary​
+    print(e.get_salary()) 
     e.increase_salary(10000)
     print(e.get_salary())
 
