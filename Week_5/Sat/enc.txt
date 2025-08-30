@@ -1,3 +1,3 @@
-The attributes et in the class is set to private so we are unable directly change the attribute using the code and 
-must be done through another way. Encapsulation is basically resitricting acces to an attribute by setting the
-attribute to private we are restricting direct access to this attribute.
+The attributes set in the class are set to private, so we are unable to directly change the attribute using the code, and
+must be done another way. Encapsulation is basically restricting access to an attribute by setting the
+attribute to private, we are restricting direct access to this attribute.
