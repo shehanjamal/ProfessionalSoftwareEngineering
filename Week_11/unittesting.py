@@ -40,6 +40,8 @@ class TestMathOperations(unittest.TestCase):
     def test_remainder(self):
         self.assertEqual(remainder(5,2),1)
         self.assertEqual(remainder(4,2),0)
+        with self.assertRaises(ZeroDivisionError):
+            remainder(1,0)
 
             
 
