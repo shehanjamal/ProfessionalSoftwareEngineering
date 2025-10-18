@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            align-items: center;
+            padding-left: 20px;
+            border: 5px solid #9c1e24;
+            padding-left: 50px;
+            margin-right: 500px;
+            margin-left: 550px;
+            margin-top:200px;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100px;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        input[type="submit"] {
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #9c1e24;
+        }
+
+    </style>
+    <head>
+        <title>Temperature Calculator</title>
+    </head>
+    <body>
+        <h1>Temperature Calculator</h1>
+        <form onsubmit="calculateTemp(); return false;">
+            <label for="celsius">Temperature type:</label><br/>
+            <input type="radio" name="conversion" value="c_to_f" checked> Celsius to Fahrenheit<br/>
+            <input type="radio" name="conversion" value="f_to_c"> Fahrenheit to Celsius<br/>
+            <input type="radio" name="conversion" value="c_to_k"> Celsius to Kelvin<br/>
+            <input type="radio" name="conversion" value="k_to_c"> Kelvin to Celsius<br/>
+            <input type="radio" name="conversion" value="k_to_f"> Kelvin to Fahrenheit<br/>
+            <input type="radio" name="conversion" value="f_to_k"> Fahrenheit to Kelvin<br/><br/>
+
+            <label for="temp1">Enter temperature:</label>
+            <input type="text" id="temp1" name="temp1"><br/><br/>
+
+            <input type="submit" value="Calculate">
+        </form>
+
+        <p id="result">Result:</p>
+
+        <script>
+            async function calculateTemp() {
+                const conversionType = document.querySelector('input[name="conversion"]:checked').value;
+                const temp1 = parseFloat(document.getElementById("temp1").value);
+                
+                const response = await fetch(`/temperature_calculator/${temp1}/${conversionType}`);
+                const data = await response.json();
+                document.getElementById('result').innerText = `Result: ${data.converted_temp}`;
+
+            }
+        </script>
+    </body>
+</html>
