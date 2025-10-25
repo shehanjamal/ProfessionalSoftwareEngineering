@@ -21,7 +21,7 @@ def show_square(number):
 @app.route('/link')
 def link():
     return '<h1><a href="https://pixers.co.nz/posters/koi-fish-ying-yang-symbol-102244746">This is a link</a></h1>' \
-    f'<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTBX3F8XrenPAlRbSvx9-c07_o15gkUUB8Rw&s" alt="Koi Fish Ying Yang Symbol" loading="lazy"/>'
+    f'<img src="https://drive.google.com/uc?export=view&id=1HBvfqy1yO2Oop_IL9P3qnw5aOBsHJNnv" alt="Koi Fish Ying Yang Symbol" loading="lazy"/>'
 
 @app.route("/home_page")
 def home_page():
