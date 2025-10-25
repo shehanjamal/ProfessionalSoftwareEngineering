@@ -5,12 +5,13 @@ import google.generativeai as genrativeai
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 genrativeai.configure(api_key=GOOGLE_API_KEY)
 
-def generate_itinerary(destination, duration, interests="general"):
+def generate_itinerary(destination, duration, age, interests="general"):
     model = genrativeai.GenerativeModel('models/gemini-pro-latest')
  
     prompt = (f"Create a detailed travel itinerary for a trip to {destination} "
               f"for {duration} days. The traveler has {interests} interests. "
-              "Please include daily activities, suggested meals, and transportation tips. "
+              "Please include daily activities, suggested meals, and transportation tips."
+              f" Please consider the average age of {age} years. "
               "Structure the output clearly with day-by-day breakdowns.")
 
     try:   
@@ -31,8 +32,9 @@ def main():
     destination = input("Enter your destination (e.g., Paris): ")
     duration = input("Enter duration in days (e.g., 5): ")
     interests = input("Enter your interests (e.g., history, food, art, adventure - optional): ")
+    age = input("Enter your average age of the group: ")
 
-    itinerary = generate_itinerary(destination, duration, interests)
+    itinerary = generate_itinerary(destination, duration, age, interests)
     print("\nGenerated Itinerary:\n")
     print(itinerary)
 
