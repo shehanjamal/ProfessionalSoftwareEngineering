@@ -10,8 +10,10 @@ def generate_itinerary(destination, duration, age, interests="general"):
  
     prompt = (f"Create a detailed travel itinerary for a trip to {destination} "
               f"for {duration} days. The traveler has {interests} interests. "
-              "Please include daily activities, suggested meals, and transportation tips."
-              f" Please consider the average age of {age} years. "
+              "Please include daily activities, suggested meals, and transportation tips. Also include a small description of each activity. "
+              f"Please consider the average age of {age} years. "
+              "No more than one activity in the first and last day. "
+              "Maximum two activities per day. "
               "Structure the output clearly with day-by-day breakdowns.")
 
     try:   
